@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>USER</title>
+<style>
+body, html {
+    height: 100%;
+   background-image: url("i009.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+fieldset{border-color:grey ; margin-left:300px ; margin-right:300px ; opacity:0.9 ; padding-left:200px}
+input[type="text"]{height:8% ; width:50%  ; font-size:20px ; background-color:grey ; color:white}
+input[type="number"]{height:8% ; width:50%  ; font-size:20px ; background-color:grey ; color:white}
+h1{color:purple ; font-size:25px ; font-family:cursive}
+h2{color:blue ; font-size:20px ; font-family:cursive}
+	input[type="reset"]{height:7% ; width:30% ; color:purple ; font-size:25px  ; border-radius:30px ; background-color:grey ; box-shadow:4px 7px 15px rgb(75,0,130)}
+	input[type="submit"]{height:7% ; width:30% ; color:purple ; font-size:25px  ; border-radius:30px ; background-color:grey ; box-shadow:4px 7px 15px rgb(75,0,130)}
+	input:hover[type="reset"]{height:8% ; background-color:lightgreen }
+	input:hover[type="submit"]{height:8% ; background-color:lightgreen }
+</style>
+</head>
+<body>
+<form action="user.php">
+
+<fieldset>
+    <legend><h1><b>LOGIN</b></h1></legend>  
+
+  <label><b><h2>ENTER FIRST NAME : </h2></b></label>&emsp;<br>
+  <input type="text" name="uname" required><br><br><br>
+
+  
+  <label><b><h2>ENTER ID : </h2></b></label><br>
+  <input type="number"  name="password" required><br><br><br>
+
+	<input type="reset" value="RESET" /> 
+
+	  &emsp;&emsp;&emsp;&emsp; <input type="submit" value="SET" />
+	  <br><br><br>
+   </fieldset>
+   </form>
+   </body>
+</html>

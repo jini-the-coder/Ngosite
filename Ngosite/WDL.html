@@ -1,0 +1,96 @@
+<html>
+ <title>NGO</title>
+
+<head><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"></head>
+
+   <body >
+	<style>
+
+	.boxcont{ position:fixed ; width:100% ; height:100px ; top:0px ; left:0px ; background-color:rgb(245,245,245)  ; z-index:30}
+	.di{position:fixed ; width:100% ; height:4px ; top:100px ; left:0px ; background-color:rgb(220,220,220)}
+	.til{position:fixed ; width:150px ; height:100px ; top:0px ; left:20px ;}
+
+	.main{width:100% ; height:526px ; top:104px ; left:0px ; position:absolute ; padding:0px ; margin:0px ; border-width:0 ; border:0}
+
+	.boxcont .home{font-size:30px ; border-width:0 ; padding-top:7px ; background-color:rgb(245,245,245)}
+	.boxcont .home:hover{color:orange}
+	
+	.boxcont ul{float:left ; padding-top:30px ; padding-left:200px ; font-size:20px}
+		
+	.boxcont ul li a{font-size:20px ; padding:12.5px 30px ; display:block ; color:rgb(119,136,153) ; text-decoration:none ; font-family:Verdana}
+	.boxcont ul li a:hover{color:rgb(139,69,19) }
+
+	.boxcont ul li{float:left ; list-style:none ; position:relative}
+
+	.boxcont ul li ul{display:none ; position:absolute ; background-color:white ; padding:0 }
+	.boxcont ul li:hover ul{display:block }
+
+	.boxcont ul li ul li{width:215px}
+
+	.boxcont ul li ul li a{padding:20px 25px ; font-size:17px ; color:rgb(47,79,79) ; font-family:Arial}
+	.boxcont ul li ul li a:hover{background-color:	rgb(0,0,128) ; color:white}
+
+	
+	body{padding:0 0px 0px 0px ; margin:0 ; overflow-x:hidden ; overflow-y:hidden}
+	
+	.line{width:100% ; height:5px ; background-color:grey}
+	.line1{width:100% ; height:2px ; background-color:rgb(220,220,220)}
+
+	.boxcont .donate{color:rgb(220,20,60) ; margin-left:100px ; font-family:Impact ; font-size:25px ; margin-bottom:5px}
+	.boxcont .donate:hover{background-color:rgb(220,20,60) ; color:white}
+        
+	 </style>
+
+
+   
+	<div class="boxcont">
+	  
+		<div class="di"></div>
+		<div class="til"><p style="font-size:35px ; font-family:cursive ; color:rgb(75,0,130)">L<span style="padding-left:5px ; color:rgb(255,140,0)">E</span><span style="padding-left:5px">A</span><span style="padding-left:5px">L</span>
+								</p></div>
+	    <ul>
+	
+		<li><a href="main.html" target="d1" class="home"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+		<li><a href="#">ABOUT</a>
+			<ul>
+			   <li><div class="line"></div><a href="about.html" target="d1">ABOUT US</a><div class="line1"></div></li>
+			   
+			</ul>
+		</li>
+		<li><a href="#">INVESTMENTS</a>
+			<ul>
+			
+			   <li><div class="line"></div><a href="sector.html" target="d1">SECTOR</a><div class="line1"></div></li>
+			   <li><a href="company.html" target="d1">COMPANY</a><div class="line1"></div></li>
+				<li><a href="balancesheet.php" target="d1">TRANSACTIONS</a><div class="line1"></div></li>
+			</ul>	
+		</li>
+		<li><a href="#">FELLOWSHIP</a>
+			<ul>
+			   <li><div class="line"></div><a href="apply.html" target="d1">APPLY</a><div class="line1"></div><li>
+			   <li><a href="program.html" target="d1">PROGRAM DETAILS</a><div class="line1"></div></li>
+				<li><a href="Receiver.html" target="d1">RECEIVE</a><div class="line1"></div></li>
+			</ul>
+		</li>
+
+		
+
+		<li><a href="#" >LOGININ</a>
+		<ul>
+		<li><li><div class="line"></div><a href="admin.html" target="d1" ><i class="fa fa-user-secret" aria-hidden="true"></i>&emsp;ADMIN</a><div class="line1"></div></li>
+		<li><a href="user.html" target="d1" ><i class="fa fa-user" aria-hidden="true"></i>&emsp;USER</a><div class="line1"></div></li>
+		</ul>
+		</li>
+
+		<li><a href="donate.html" target="d1" class="donate">DONATE</a></li>
+
+		
+
+	   </ul>
+		
+	</div>
+
+<iframe name="d1" class="main" src="main.html"></iframe>
+	
+   </body>
+</html>

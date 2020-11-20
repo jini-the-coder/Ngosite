@@ -1,0 +1,205 @@
+<html>
+ <title>Registration form</title>
+ 
+
+     <style>
+
+	h1{color:green}
+       div ,h1{margin-left:30px ; font-size:30px}
+	label{color:maroon ; height:50% ; width:20% ; font-size:20px}
+	input[type="text"]{height:5% ; width:30%  ; font-size:20px}
+        input[type="number"]{height:5% ; width:20% ; font-size:20px}
+	input[type="date"]{height:5%}
+	input[type="radio"]{height:5% ; width:2%}
+	input[type="checkbox"]{height:5% ; width:2%}
+	legend{color:green ; font-size:25px}
+	fieldset{border-color:	rgb(139,69,19) ; margin-left:20px ; margin-right:150px ; opacity:0.9}
+	input[type="tel"]{height:5% ; width:25%  ; font-size:20px}
+	textarea{height:10%  ; font-size:15px}
+	input[type="email"]{height:5% ; width:25%  ; font-size:20px}
+	select{height:5% ; width:15%} 
+	input[type="reset"]{height:10% ; width:12% ; color:rgb(0,100,0) ; font-size:25px ; opacity:0.8 ; border-radius:30px ; background-color:rgb(192,192,192) ; box-shadow:4px 7px 15px rgb(75,0,130)}
+	input[type="submit"]{height:10% ; width:12% ; color:rgb(0,100,0) ; font-size:25px ; opacity:0.8 ; border-radius:30px ; background-color:rgb(173,255,47) ; box-shadow:4px 7px 15px rgb(75,0,130)}
+	input:hover[type="reset"]{height:12% ; background-color:lightblue }
+	input:hover[type="submit"]{height:12% ; background-color:lightblue }
+	img{width:100% ; height:100% ; position:fixed ; top:0px ; left:0px}
+
+	header{padding-left:20px ; padding-top:20px ; background-color:rgb(139,0,0) ; margin-left:100px ; opacity:0.75}
+    	
+    </style>
+
+  <body>
+  <script>
+    function myfunction(){
+    var firstname = document.forms["RegForm"]["Fname"];
+    if(firstname.value=="")
+	{
+		window.alert("Please Enter Your firstName");
+		firstname.focus();
+		return false;
+	}
+	if(!isNaN(firstname.value) || !/^[a-zA-Z]*$/g.test(firstname.value))  
+	{
+		window.alert("Please Enter Your firstName correctly");
+		firstname.focus();
+		return false;
+	}
+	
+	var middlename = document.forms["RegForm"]["Mname"];
+    if(middlename.value=="")
+	{
+		window.alert("Please Enter Your middleName");
+		middlename.focus();
+		return false;
+	}
+	if(!isNaN(middlename.value) || !/^[a-zA-Z]*$/g.test(middlename.value))  
+	{
+		window.alert("Please Enter Your middleName correctly");
+		middlename.focus();
+		return false;
+	}
+	var lastName = document.forms["RegForm"]["Lname"];
+    if(lastName.value=="")
+	{
+		window.alert("Please Enter Your lastName");
+		lastName.focus();
+		return false;
+	}
+	if(!isNaN(lastName.value) || !/^[a-zA-Z]*$/g.test(lastName.value))  
+	{
+		window.alert("Please Enter Your lastName correctly");
+		lastName.focus();
+		return false;
+	}
+	var age = document.forms["RegForm"]["Age"];
+	if (age.value < 16)
+	{
+		window.alert("OPPS!! your age is not acceptable we need above 15 age ");
+		age.focus();
+		return false;
+	}
+	var email = document.forms["RegForm"]["Email"];
+	if (email.value == "")                                  
+    {
+        window.alert("Please enter e-mail address.");
+        email.focus();
+        return false;
+    }
+ 
+    if (email.value.indexOf("@", 0) < 0)                
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+ 
+    if (email.value.indexOf(".", 0) < 0)                
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+	return true;
+}
+   </script>
+  
+<img src="registration2.jpg">
+ <header>    
+ <h1><b>REGISTRATION FORM</b></h1>
+<br><br>
+</header>
+<br><br>
+
+<form  name="RegForm" action="thanksreg.php" onsubmit="return myfunction()" method="GET">
+
+ <fieldset>
+    <legend><h3><b>PERSONAL DETAILS</b></h3></legend>  
+
+  <label><b>FIRST NAME : </b></label>&emsp;
+  <input type="text" name="Fname" required><br><br><br>
+
+  <label><b>MIDDLE NAME : </b></label>
+  <input type="text" name="Mname" required><br><br><br>
+
+  <label><b>LAST NAME :</b></label>&emsp;&emsp;
+  <input type="text" name="Lname" required><br><br><br>
+
+  <label><b>DATE OF BIRTH :</b></label>                                    
+  <input type="date" name="Date" required><br><br><br>
+
+  <label><b>AGE :</b></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <input type="number" name="Age"><br><br><br>
+
+  <label><b>GENDER :</b></label>&emsp;&emsp;
+  <input type="radio" name="Gender" value="MALE"><label>MALE</label>&emsp;
+  <input type="radio" name="Gender" value="FEMALE"><label>FEMALE </label>&emsp;
+  <input type="radio" name="Gender" value="TRANSGENDER"><label>TRANSGENDER</label><br><br><br>
+
+  <label><b>OCCUPATION :</b></label>&emsp;
+  <input type="radio" name="Occupation" value="STUDENT"><label>STUDENT</label>&emsp;
+  <input type="radio" name="Occupation" value="EMPLOYEE"><label>EMPLOYEE</label>&emsp;
+  <input type="radio" name="Occupation" value="BUSSINESS"><label>BUSSINESS</label><br><br><br>
+
+  <label><b>EXACTLY? :</b></label>&emsp;
+  <textarea rows=2 cols=20 placeholder="Describe your occupation here"></textarea><br><br><br>
+
+  <label><b>MARITAL STATUS :</b></label>&emsp;
+  <input type="radio" name="MS" value="UN-MARRIED"><label>UN-MARRIED</label>&emsp;
+  <input type="radio" name="MS" value="MARRIED"><label>MARRIED</label>&emsp;
+  <input type="radio" name="MS" value="FOREVER SINGLE"><label>FOREVER SINGLE</label><br><br><br>
+  
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+      <legend><h3><b>CONTACT DETAILS</b></h3></legend>
+
+  <label><b>CONTACT NO :</b></label>&emsp;&emsp;
+  <input type="tel" name="Contactno" pattern="^[0-9]{10}$" required><br><br><br>
+
+  <label><b>ADDRESS :</b></label>&emsp;&emsp;&emsp;&emsp;
+  <textarea name="Address" rows=4 cols=30 required></textarea><br><br><br>
+
+  <label><b>E-MAIL ID :</b></label>&emsp;&emsp;&emsp;&nbsp;&nbsp;
+  <input type="email" name="Email" required><br><br><br>
+
+  <label><b>STATE :</b></label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+  <select name="State" required>
+	<option value="">---select---</option>
+	<option value="MAHARASHTRA">MAHARASHTRA</option>
+	<option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+	<option value="KERALA">KERALA</option>
+	<option value="RAJASTHAN">RAJASTHAN</option>
+	<option value="DELHI">DELHI</option>
+	<option value="WEST BENGAL">WEST BENGAL</option>
+	<option value="UTTAR PRADESH">UTTAR PRADESH</option>
+	<option value="GUJURAT">GUJURAT</option>
+  </select><br><br><br>
+ </fieldset>
+
+ <br>
+
+  <fieldset>
+     <legend><h3><b>EXPERIENCE</b></h3></legend>
+
+	<label><b>MEMBER OF ANY NGO TEAM? :</b></label>&emsp;
+	<input type="text"><br><br><br>
+
+	<label><b>SOCIAL ACTIVITIES:</b></label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+	<textarea rows=4 cols=30></textarea><br><br><br>
+
+
+  </fieldset>
+
+  <br><br>&emsp;&emsp;&emsp;&emsp;
+
+	&emsp;&emsp;&emsp;<input type="reset" value="RESET" /> 
+
+	  &emsp;&emsp;&emsp;&emsp; <input type="submit" value="SUBMIT" />
+  </form>
+
+  <br><br>	
+	
+   </body>
+</html>

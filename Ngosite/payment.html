@@ -1,0 +1,314 @@
+<html>
+ <title>Payment form</title>
+   
+
+     <style>
+
+	h1{color:red}
+        div ,h1{margin-left:30px ; font-size:30px}
+	label{color:orange ; height:50% ; width:20% ; font-size:20px}
+	input[type="text"]{height:5% ; width:30%  ; font-size:20px}
+	input[type="number"]{height:5% ; width:20% ; font-size:20px}
+	input[type="checkbox"]{height:5% ; width:2%}
+	legend{color:red ; font-size:25px }
+	fieldset{border-color:rgb(255,140,0) ; margin-left:20px ; margin-right:150px ; opacity:0.9}
+	input[type="tel"]{height:5% ; width:25%  ; font-size:20px}
+	textarea{height:10%  ; font-size:15px}
+	input[type="email"]{height:5% ; width:25%  ; font-size:20px}
+	select{height:5% ; width:15%} 
+	input[type="reset"]{height:10% ; width:12% ; color:rgb(0,0,128) ; font-size:20px ; opacity:0.8 ; border-radius:30px ; background-color:rgb(192,192,192) ; box-shadow:4px 7px 15px rgb(0,0,128)}
+	input[type="submit"]{height:10% ; width:12% ; color:rgb(0,0,128) ; font-size:20px ; opacity:0.8 ; border-radius:30px ; background-color:rgb(173,255,47) ; box-shadow:4px 7px 15px rgb(0,0,128)}
+	input:hover[type="reset"]{height:12% ; background-color:lightblue }
+	input:hover[type="submit"]{height:12% ; background-color:lightblue }
+	a{font-size:17px ; link:no-underline ;color:rgb(210,105,30)}
+	button{height:7% ; width:17% ; opacity:0.8}
+	button:hover{height:9% ; opacity:1}
+	img{ width:100%  ; height:100% ; position:fixed ; top:0px ; left:0px }
+
+	header{padding-left:20px ; padding-top:20px ; background-repeat:repeat ; margin-left:100px ; background-color:	rgb(255,140,0) ; opacity:0.6 }
+    	
+    </style>
+<body> 
+
+<script>
+    function myfunction(){
+    var firstname = document.forms["PayForm"]["Fname"];
+    if(firstname.value=="")
+	{
+		window.alert("Please Enter Your firstName");
+		firstname.focus();
+		return false;
+	}
+	if(!isNaN(firstname.value) || !/^[a-zA-Z]*$/g.test(firstname.value))  
+	{
+		window.alert("Please Enter Your firstName correctly ");
+		firstname.focus();
+		return false;
+	}
+	
+	var middlename = document.forms["PayForm"]["Mname"];
+    if(middlename.value=="")
+	{
+		window.alert("Please Enter Your middleName");
+		middlename.focus();
+		return false;
+	}
+	if(!isNaN(middlename.value) || !/^[a-zA-Z]*$/g.test(middlename.value))  
+	{
+		window.alert("Please Enter Your middleName correctly");
+		middlename.focus();
+		return false;
+	}
+	var lastName = document.forms["PayForm"]["Lname"];
+    if(lastName.value=="")
+	{
+		window.alert("Please Enter Your lastName");
+		lastName.focus();
+		return false;
+	}
+	if(!isNaN(lastName.value) || !/^[a-zA-Z]*$/g.test(lastName.value))  
+	{
+		window.alert("Please Enter Your lastName correctly");
+		lastName.focus();
+		return false;
+	}
+	var age = document.forms["PayForm"]["Age"];
+	if (age.value < 16)
+	{
+		window.alert("OPPS!! your age is not acceptable we need above 15 age ");
+		age.focus();
+		return false;
+	}
+	var email = document.forms["PayForm"]["Email"];
+	if (email.value == "")                                  
+    {
+        window.alert("Please enter e-mail address.");
+        email.focus();
+        return false;
+    }
+ 
+    if (email.value.indexOf("@", 0) < 0)                
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+ 
+    if (email.value.indexOf(".", 0) < 0)                
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+	var agriculture = document.forms["PayForm"]["Agriculture"];
+	var education = document.forms["PayForm"]["Education"];
+	var healthcare = document.forms["PayForm"]["Healthcare"];
+	var housing = document.forms["PayForm"]["Housing"];
+	if(agriculture.value == "0" && education.value == "0" && healthcare.value == "0" && housing.value == "0")
+	{
+	    window.alert("Enter the amount ");
+		agriculture.focus();
+		return false;
+	}
+	if (agriculture.value < 100 && agriculture.value != "0")
+	{
+		window.alert("This amount cannot be accepted!!Please pay more ");
+		agriculture.focus();
+		return false;
+	}
+	
+	if (education.value < 100 && education.value != "0")
+	{
+		window.alert("This amount cannot be accepted!!Please pay more ");
+		education.focus();
+		return false;
+	}
+
+	if (healthcare.value < 100 && healthcare.value != "0")
+	{
+		window.alert("This amount cannot be accepted!!Please pay more ");
+		healthcare.focus();
+		return false;
+	}
+
+	if (housing.value < 100 && housing.value != "0")
+	{
+		window.alert("This amount cannot be accepted!!Please pay more ");
+		housing.focus();
+		return false;
+	}
+	var noc = document.forms["PayForm"]["Noc"];
+	if(noc.value=="")
+	{
+		window.alert("Please Enter Your Name on card");
+		noc.focus();
+		return false;
+	}
+	if(!isNaN(noc.value) || !/^[a-zA-Z]*$/g.test(noc.value))  
+	{
+		window.alert("Please Enter Your Name on card correctly ");
+		noc.focus();
+		return false;
+	}
+	var cn = document.forms["PayForm"]["CN"];
+	if (cn.value.length!=16)
+	{
+	    window.alert("Please Enter valid card number correctly ");
+		cn.focus();
+		return false;
+	}
+	var cvv = document.forms["PayForm"]["Cvv"];
+	if (cvv.value.length!=3)
+	{
+	    window.alert("Please Enter valid cvv correctly ");
+		cvv.focus();
+		return false;
+	}
+	return true;
+	}
+   </script>
+
+
+
+<img src="payment.jpg">	
+
+ <header>    
+ <h1><b>PAYMENT FORM</b></h1>
+<br><br>
+</header>
+<br><br>
+
+
+<form action="thankspay.php" name="PayForm" onsubmit="return myfunction()" method="GET">
+ <fieldset>
+    <legend><h3><b>PERSONAL DETAILS</b></h3></legend>  
+
+  <label><b>FIRST NAME : </b></label>&emsp;
+  <input type="text"  name="Fname" required><br><br><br>
+  
+	
+  <label><b>MIDDLE NAME : </b></label>
+  <input type="text"  name="Mname" required><br><br><br>
+
+  <label><b>LAST NAME :</b></label>&emsp;&emsp;
+  <input type="text" name="Lname" required><br><br><br>
+  
+  	
+  <label><b>AGE :</b></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <input type="number" name="Age" id="d"><br><br><br>
+  
+
+  <label><b>CONTACT NO :</b></label>&emsp;
+  <input type="tel" name="Contactno" pattern="^[0-9]{10}$" required><br><br><br>
+
+  <label><b>E-MAIL ID :</b></label>&emsp;&emsp;&emsp;
+  <input type="email" name="Email" required><br><br><br>
+
+  <label><b>STATE :</b></label>&emsp;&emsp;&emsp;&emsp;&emsp;
+  <select name="State" required>
+	<option value="">---select---</option>
+	<option value="MAHARASHTRA">MAHARASHTRA</option>
+	<option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+	<option value="KERALA">KERALA</option>
+	<option value="RAJASTHAN">RAJASTHAN</option>
+	<option value="DELHI">DELHI</option>
+	<option value="WEST BENGAL">WEST BENGAL</option>
+	<option value="UTTAR PRADESH">UTTAR PRADESH</option>
+	<option value="GUJURAT">GUJURAT</option>
+  </select><br><br><br>
+
+
+   <label><b>OCCUPATION :</b></label>&emsp;
+  <input type="radio" name="Occupation" value="STUDENT"><label>STUDENT</label>&emsp;
+  <input type="radio" name="Occupation" value="EMPLOYEE"><label>EMPLOYEE</label>&emsp;
+  <input type="radio" name="Occupation" value="BUSSINESS"><label>BUSSINESS</label> <br><br><br>
+
+  <label><b>EXACTLY? :</b></label>&emsp;
+  <textarea rows=2 cols=20 placeholder="Describe your occupation here"></textarea><br><br><br>
+
+  
+  </fieldset>
+
+  <br><br> 
+
+  <fieldset>
+     <legend><h3><b>PAYMENT DETAILS</b></h3></legend>
+
+  <label><b>AMOUNT :</b></label>&emsp;&emsp;&emsp;<br>
+  <label>(Enter the amount in each sectors as<br> per your choice.If you do not want to<br> pay in a particular sector enter "0")</label><br><br>
+  
+    <label><b>agriculture : </b></label>&emsp;&emsp;
+  <input type="number" name="Agriculture" placeholder="0000" required><br><br>
+
+    <label><b>education :</b></label>&emsp;&emsp;&emsp;
+  <input type="number" name="Education" placeholder="0000" required><br><br>
+
+    <label><b>health care : </b></label>&emsp;&emsp;
+  <input type="number" name="Healthcare" placeholder="0000" required><br><br>
+
+    <label><b>housing :</b></label>&emsp;&emsp;&emsp;&emsp;
+  <input type="number" name="Housing" placeholder="0000" required><br><br><br>
+
+	 <fieldset>
+    <legend><h3>CARD DETAILS</h3></legend>  
+
+  <label><b>NAME ON CARD:</b></label>&emsp;&emsp;
+  <input type="text" name="Noc" required><br><br>
+
+  <label><b>CARD NUMBER:</b></label>&emsp;&emsp;&nbsp;
+  <input type="number" name="CN" required><br><br><br><br>
+
+  
+  <label><b>MONTH :</b></label>&emsp;
+  <select name="Month" required>
+	<option value="">MM</option>
+	<option value="01">01</option>
+	<option value="02">02</option>
+	<option value="03">03</option>
+	<option value="04">04</option>
+	<option value="05">05</option>
+	<option value="06">06</option>
+	<option value="07">07</option>
+	<option value="08">08</option>
+	<option value="09">09</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	
+  </select>&emsp;&emsp;<br><br>
+
+  <label><b>YEAR : </b></label>&emsp;&emsp;
+  <select name="Year" required>
+	<option value="">YY</option>
+	<option value="">2018</option>
+	<option value="">2019</option>
+	<option value="">2020</option>
+	<option value="">2021</option>
+	<option value="">2022</option>
+	<option value="">2023</option>
+	<option value="">2024</option>
+	<option value="">2025</option>
+	<option value="">2026</option>
+	<option value="">2027</option>
+	<option value="">2028</option>
+	<option value="">2029</option>
+	<option value="">2030</option>
+	
+  </select><br><br><br>
+
+  <label><b>CVV:</b></label>&emsp;&emsp;&emsp;
+  <input type="text" name="Cvv" required><br><br>
+    
+</fieldset>
+  <br><br>
+  </fieldset>
+
+  <br><br>&emsp;&emsp;&emsp;&emsp;
+
+	&emsp;&emsp;&emsp;<input type="reset" value="RESET" /> 
+
+	  &emsp;&emsp;&emsp;&emsp; <input type="submit" value="SUBMIT" />
+	 </form>
+  <br><br>
+   </body>
+</html>
